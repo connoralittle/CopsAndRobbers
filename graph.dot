@@ -1,0 +1,32 @@
+digraph {
+  2 [label="cop_move1 cop1"];
+  0 [label="---", shape=doublecircle];
+  3 [label="robber_move n3 n4", shape=box];
+  1 [label="game_terminate"];
+  6 [label="robber_move n3 n4"];
+  4 [label="cop_move2 cop1"];
+  5 [label="robber_move n4 n3"];
+  7 [label="robber_move n4 n3"];
+  8 [label="cop_move1 cop1"];
+  9 [label="robber_move n3 n4"];
+  10 [label="cop_move2 cop1"];
+  2 -> 5;
+  2 -> 1;
+  3 -> 2;
+  3 -> 8;
+  1 -> 0;
+  6 -> 2;
+  6 -> 8;
+  4 -> 6;
+  4 -> 1;
+  5 -> 4;
+  5 -> 10;
+  7 -> 10;
+  7 -> 10;
+  8 -> 7;
+  8 -> 1;
+  9 -> 8;
+  9 -> 8;
+  10 -> 9;
+  10 -> 1;
+}
