@@ -1,5 +1,6 @@
 
 USEFUL COMMANDS
+
 //open the environment
 docker run -it --privileged -v ${PWD}:/root/cisc813 cjmuise/cisc813
 
@@ -25,14 +26,17 @@ The cops and robbers problem:
 
 
 Domain_generic.pddl
+
     The domain file is commented for clarity. It is a problem-agnostic version of the domain with bounded size.
     It is also much slower
 
 Domains
+
     problem_maker.ipynb can be used to create new domains programmatically
     domains hard-code cop move actions to reduce state space
 
 Problems
+
     problem_maker.ipynb can be used to create new problems programmatically
     Each problem has a different graph configuration and starting locations
     Problems with 2 cops can take a long time to run, I recommend one robber unless the graph is simple (like a straight line)
@@ -43,19 +47,18 @@ Problems
     Problem_line_chase.pddl is commented for clarity
 
 Problem_solutions
-    Problem solutions stores some of the graphs of the policies for future reference
 
+    Problem solutions stores some of the graphs of the policies for future reference
     All robber nodes can lead to game terminate. This is done to allow the game to never definitivly end. All arcs to game terminate
     should be ignored when reading the graph
-
     square shows the robber wins if its always 2 sqares away from the cop
     line_chase shows that the robbers policy is to run to the end of the line and stay there
     Others can be inspected
-
     The robber often moves back to known positions by following the cop if it goes in the opposite direction
     This makes it seem like the robber is taunting the cop
 
 Friendly robbers
+
     An extra variation is the friendly robber
     This robber wants to get captured which reverses the problem
     Instead of trying to avoid all possible capture paths
