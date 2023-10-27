@@ -1,17 +1,21 @@
 
 USEFUL COMMANDS
 
-//open the environment
-docker run -it --privileged -v ${PWD}:/root/cisc813 cjmuise/cisc813
+open the environment
 
-//run the problem
-prppp domains/domain_line_chase.pddl problems/problem_line_chase.pddl --output-format 3
+    docker run -it --privileged -v ${PWD}:/root/cisc813 cjmuise/cisc813
 
-//run friendly versions of the problem with no cycles
-prppp domains/domain_line_chase.pddl problems/problem_line_chase.pddl --output-format 3 --localize-enabled 0
+run the problem
 
-//visualize the policy
-prpviz policy.out
+    prppp domains/domain_line_chase.pddl problems/problem_line_chase.pddl --output-format 3
+
+run friendly versions of the problem with no cycles
+
+    prppp domains/domain_line_chase.pddl problems/problem_line_chase.pddl --output-format 3 --localize-enabled 0
+
+visualize the policy
+
+    prpviz policy.out
 
 The cops and robbers problem:
 
