@@ -24,15 +24,20 @@ The cops and robbers problem:
     so the robber should have a plan for evasion no matter what move the cops make.
 
 
-Domain.pddl
-    The domain file is commented for clarity
+Domain_generic.pddl
+    The domain file is commented for clarity. It is a problem-agnostic version of the domain with bounded size.
+    It is also much slower
+
+Domains
+    problem_maker.ipynb can be used to create new domains programmatically
+    domains hard-code cop move actions to reduce state space
 
 Problems
-    problem_maker.ipynb can be used to create new problems programatically
+    problem_maker.ipynb can be used to create new problems programmatically
     Each problem has a different graph configuration and starting locations
     Problems with 2 cops can take a long time to run, I recommend one robber unless the graph is simple (like a straight line)
     If the robber has a solution a strong cyclic solution will be found
-    For example, the robber can avoid capture indefinitly on a square
+    For example, the robber can avoid capture indefinitely on a square
     If the robber is eventually caught, no strong cyclic solution will be found
     For example, the robber loses on a straight line
     Problem_line_chase.pddl is commented for clarity
@@ -43,10 +48,9 @@ Problem_solutions
     All robber nodes can lead to game terminate. This is done to allow the game to never definitivly end. All arcs to game terminate
     should be ignored when reading the graph
 
-    star5 shows that the policy for the robber is to hide on one branch and pray
     square shows the robber wins if its always 2 sqares away from the cop
     line_chase shows that the robbers policy is to run to the end of the line and stay there
-    tree shows the robber descends down the longest tree branch to hide
+    Others can be inspected
 
     The robber often moves back to known positions by following the cop if it goes in the opposite direction
     This makes it seem like the robber is taunting the cop
@@ -57,9 +61,7 @@ Friendly robbers
     Instead of trying to avoid all possible capture paths
     You are trying to capture a randomly moving entity
     The problem solution also reverses
-    The game ends if the robber is captured. To incentivise speed, the game randomly assigns the robber survived
-    If the robber survives the robber loses
-    Instead of most nodes leading to game terminated and a -1 meaning the robber loses
-    Most games end in -1 and a game terminated means the cop loses
     No solutions can exist as all nodes have a chance to fail
-    Line_opposite_friendly.png shows a solution of the robber trying to get caught
+    Line_chase_friendly.png shows a solution of the robber trying to get caught
+    In acyclic graphs --localize-enabled 0 ensures the robber beelines for the cop instead of going to a known position
+    In cyclic graphs, it will cause an infinite loop
