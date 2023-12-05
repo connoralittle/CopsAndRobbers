@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 USEFUL COMMANDS
 
@@ -19,7 +17,6 @@ visualize the policy
 
     prpviz policy.out
 
->>>>>>> 0cea96e1047a81be5f8b886ae132b98694b063d4
 The cops and robbers problem:
 
     The cops and robbers problem is a variation of a pursuit-evasion problem.
@@ -65,7 +62,6 @@ Problems
     For example, the robber loses on a straight line
     Problem_line_chase.pddl is commented for clarity
 
-<<<<<<< HEAD
 graph_libraries
     contains the data for generating graphs. the text files have adjacency graphs and the other files have 
     the compressed data that can be extracted with showg
@@ -92,27 +88,3 @@ HOW TO RUN
         prpviz policy.out
 
 Planner not provided
-=======
-Problem_solutions
-
-    Problem solutions stores some of the graphs of the policies for future reference
-    All robber nodes can lead to game terminate. This is done to allow the game to never definitivly end. All arcs to game terminate
-    should be ignored when reading the graph
-    square shows the robber wins if its always 2 sqares away from the cop
-    line_chase shows that the robbers policy is to run to the end of the line and stay there
-    Others can be inspected
-    The robber often moves back to known positions by following the cop if it goes in the opposite direction
-    This makes it seem like the robber is taunting the cop
-
-Friendly robbers
-
-    An extra variation is the friendly robber
-    This robber wants to get captured which reverses the problem
-    Instead of trying to avoid all possible capture paths
-    You are trying to capture a randomly moving entity
-    The problem solution also reverses
-    No solutions can exist as all nodes have a chance to fail
-    Line_chase_friendly.png shows a solution of the robber trying to get caught
-    In acyclic graphs --localize-enabled 0 ensures the robber beelines for the cop instead of going to a known position
-    In cyclic graphs, it will cause an infinite loop
->>>>>>> 0cea96e1047a81be5f8b886ae132b98694b063d4
