@@ -1,22 +1,4 @@
 
-USEFUL COMMANDS
-
-open the environment
-
-    docker run -it --privileged -v ${PWD}:/root/cisc813 cjmuise/cisc813
-
-run the problem
-
-    prppp domains/domain_line_chase.pddl problems/problem_line_chase.pddl --output-format 3
-
-run friendly versions of the problem with no cycles
-
-    prppp domains/domain_line_chase.pddl problems/problem_line_chase.pddl --output-format 3 --localize-enabled 0
-
-visualize the policy
-
-    prpviz policy.out
-
 The cops and robbers problem:
 
     The cops and robbers problem is a variation of a pursuit-evasion problem.
@@ -29,6 +11,7 @@ The cops and robbers problem:
     so the robber should have a plan for evasion no matter what move the cops make.
 
 Friendly robbers
+
     An extra variation is the friendly robber
     This robber wants to get captured which reverses the problem
     Instead of trying to avoid all possible capture paths
@@ -88,3 +71,4 @@ HOW TO RUN
         prpviz policy.out
 
 Planner not provided
+Not all domain and problem files pushed due to space
