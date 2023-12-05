@@ -1,0 +1,180 @@
+INFO     Running translator.
+INFO     translator input: ['/PROJECT/cops_and_robbers/benchmarks/eulerdig/d_eulerdig_287.pddl', '/PROJECT/cops_and_robbers/benchmarks/eulerdig/p_eulerdig_287.pddl']
+INFO     translator arguments: ['--keep-unimportant-variables', '--invariant-generation-max-time', '300']
+INFO     translator time limit: None
+INFO     translator memory limit: 4096 MB
+INFO     callstring: /usr/bin/python /PROJECT/builds/release64/bin/translate/translate.py /PROJECT/cops_and_robbers/benchmarks/eulerdig/d_eulerdig_287.pddl /PROJECT/cops_and_robbers/benchmarks/eulerdig/p_eulerdig_287.pddl --keep-unimportant-variables --invariant-generation-max-time 300
+Parsing...
+Parsing: [0.010s CPU, 0.021s wall-clock]
+Normalizing task... [0.000s CPU, 0.002s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.001s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.042s wall-clock]
+Preparing model... [0.000s CPU, 0.002s wall-clock]
+Generated 162 rules.
+Computing model... [0.010s CPU, 0.004s wall-clock]
+140 relevant atoms
+188 auxiliary atoms
+328 final queue length
+689 total queue pushes
+Completing instantiation... [0.000s CPU, 0.004s wall-clock]
+Instantiating: [0.020s CPU, 0.056s wall-clock]
+Computing fact groups...
+Finding invariants...
+10 initial candidates
+Finding invariants: [0.010s CPU, 0.006s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.000s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+20 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.010s CPU, 0.013s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.001s wall-clock]
+Translating task: [0.010s CPU, 0.013s wall-clock]
+80 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+48 operators removed
+0 axioms removed
+1 propositions removed
+Detecting unreachable propositions: [0.000s CPU, 0.003s wall-clock]
+Reordering and filtering variables...
+0 of 1 mutex groups necessary.
+66 of 66 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.002s wall-clock]
+Translator variables: 21
+Translator derived variables: 0
+Translator facts: 42
+Translator goal facts: 1
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 66
+Translator axioms: 0
+Translator task size: 588
+Translator peak memory: 16468 KB
+Writing output... [0.000s CPU, 0.007s wall-clock]
+Done! [0.060s CPU, 0.129s wall-clock]
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: ['--search', 'prpsearch()']
+INFO     search time limit: None
+INFO     search memory limit: 4096 MB
+INFO     search executable: /PROJECT/builds/release64/bin/downward
+INFO     callstring: /PROJECT/builds/release64/bin/downward --search 'prpsearch()' --internal-plan-file sas_plan < output.sas
+reading input... [t=0.0003336s]
+done reading input! [t=0.0024034s]
+packing state variables...done! [t=0.0025161s]
+Variables: 21
+FactPairs: 42
+Bytes per state: 4
+Building successor generator...done! [t=0.0028008s]
+peak memory difference for root successor generator creation: 0 KB
+time for root successor generation creation: 2.65e-05s
+done initializing global data [t=0.0030222s]
+
+Total allotted time (s): 3600
+Max time for core phase (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+
+
+Creating the simulator...
+
+
+Generating an incumbent solution...
+
+
+Beginning search for strong cyclic solution...
+
+
+FOND Search: Round 1
+Starting a fresh search...
+
+ {........................}
+
+Could not close 2 of 9 open leaf states.
+Investigated 39 states for the strong cyclic plan.
+
+
+FOND Search: Round 2
+Starting a fresh search...
+
+ {.}
+
+Could not close 0 of 0 open leaf states.
+Investigated 1 states for the strong cyclic plan.
+
+Found the initial state to be a failed one. No strong cyclic plan exists.
+Using the best policy found, with a score of 0.695
+
+Done repairing...
+
+
+Doing one final best-effort round ignoring FSAPs for unhandled states.
+
+
+FOND Search: Round 3
+Starting a fresh search...
+
+ {.................................}
+
+Could not close 0 of 2 open leaf states.
+Investigated 42 states for the strong cyclic plan.
+
+
+-------------------------------------------------------------------
+
+
+		-----------------------------------
+		      { General Statistics }
+		-----------------------------------
+
+                         Time taken: 0.0182586 sec
+                           # Rounds: 3
+                    # Weak Searches: 24
+                      Solution Size: 21
+                          FSAP Size: 219
+                       Poison Count: 21
+
+-------------------------------------------------------------------
+
+
+Running the simulation...
+
+		--------------------------------------
+		      { Simulation Statistics }
+		--------------------------------------
+
+                          Trials: 100
+                           Depth: 1000
+                         Success: 84	 (84.00 %)
+                        Failures: 16	 (16.00 %)
+
+ Failures due to unhandled state: 16	 (100.00 %)
+     Failures due to depth limit: 0	 (0.00 %)
+
+      Mean successful run length: 4.72
+  Mean (state-)failed run length: 0.51
+
+-------------------------------------------------------------------
+
+Dumping the policy and fsaps...
+
+No strong (a)cyclic solution found.
+Peak memory: 5480 KB
+
+
+real	0m2.037s
+user	0m0.263s
+sys	0m0.276s

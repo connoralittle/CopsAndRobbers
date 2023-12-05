@@ -1,0 +1,254 @@
+INFO     Running translator.
+INFO     translator input: ['/PROJECT/cops_and_robbers/benchmarks/eulerdig_2cops/d_eulerdig_2cops_1407.pddl', '/PROJECT/cops_and_robbers/benchmarks/eulerdig_2cops/p_eulerdig_2cops_1407.pddl']
+INFO     translator arguments: ['--keep-unimportant-variables', '--invariant-generation-max-time', '300']
+INFO     translator time limit: None
+INFO     translator memory limit: 4096 MB
+INFO     callstring: /usr/bin/python /PROJECT/builds/release64/bin/translate/translate.py /PROJECT/cops_and_robbers/benchmarks/eulerdig_2cops/d_eulerdig_2cops_1407.pddl /PROJECT/cops_and_robbers/benchmarks/eulerdig_2cops/p_eulerdig_2cops_1407.pddl --keep-unimportant-variables --invariant-generation-max-time 300
+Parsing...
+Parsing: [0.010s CPU, 0.027s wall-clock]
+Normalizing task... [0.010s CPU, 0.002s wall-clock]
+Instantiating...
+Generating Datalog program... [0.000s CPU, 0.002s wall-clock]
+Normalizing Datalog program...
+Normalizing Datalog program: [0.010s CPU, 0.052s wall-clock]
+Preparing model... [0.000s CPU, 0.004s wall-clock]
+Generated 275 rules.
+Computing model... [0.010s CPU, 0.007s wall-clock]
+245 relevant atoms
+346 auxiliary atoms
+591 final queue length
+1318 total queue pushes
+Completing instantiation... [0.010s CPU, 0.009s wall-clock]
+Instantiating: [0.030s CPU, 0.076s wall-clock]
+Computing fact groups...
+Finding invariants...
+10 initial candidates
+Finding invariants: [0.010s CPU, 0.005s wall-clock]
+Checking invariant weight... [0.000s CPU, 0.001s wall-clock]
+Instantiating groups... [0.000s CPU, 0.001s wall-clock]
+Collecting mutex groups... [0.000s CPU, 0.001s wall-clock]
+Choosing groups...
+31 uncovered facts
+Choosing groups: [0.000s CPU, 0.001s wall-clock]
+Building translation key... [0.000s CPU, 0.001s wall-clock]
+Computing fact groups: [0.010s CPU, 0.011s wall-clock]
+Building STRIPS to SAS dictionary... [0.000s CPU, 0.000s wall-clock]
+Building dictionary for full mutex groups... [0.000s CPU, 0.000s wall-clock]
+Building mutex information...
+Building mutex information: [0.000s CPU, 0.000s wall-clock]
+Translating task...
+Processing axioms...
+Simplifying axioms... [0.000s CPU, 0.000s wall-clock]
+Processing axioms: [0.000s CPU, 0.002s wall-clock]
+Translating task: [0.010s CPU, 0.016s wall-clock]
+258 effect conditions simplified
+0 implied preconditions added
+Detecting unreachable propositions...
+0 operators removed
+0 axioms removed
+0 propositions removed
+Detecting unreachable propositions: [0.010s CPU, 0.007s wall-clock]
+Reordering and filtering variables...
+0 of 0 mutex groups necessary.
+143 of 143 operators necessary.
+0 of 0 axiom rules necessary.
+Reordering and filtering variables: [0.000s CPU, 0.004s wall-clock]
+Translator variables: 31
+Translator derived variables: 0
+Translator facts: 62
+Translator goal facts: 1
+Translator mutex groups: 0
+Translator total mutex groups size: 0
+Translator operators: 143
+Translator axioms: 0
+Translator task size: 1828
+Translator peak memory: 16984 KB
+Writing output... [0.010s CPU, 0.007s wall-clock]
+Done! [0.090s CPU, 0.164s wall-clock]
+INFO     Running search (release64).
+INFO     search input: output.sas
+INFO     search arguments: ['--search', 'prpsearch()']
+INFO     search time limit: None
+INFO     search memory limit: 4096 MB
+INFO     search executable: /PROJECT/builds/release64/bin/downward
+INFO     callstring: /PROJECT/builds/release64/bin/downward --search 'prpsearch()' --internal-plan-file sas_plan < output.sas
+reading input... [t=0.0003446s]
+done reading input! [t=0.0040855s]
+packing state variables...done! [t=0.0041846s]
+Variables: 31
+FactPairs: 62
+Bytes per state: 4
+Building successor generator...done! [t=0.0044741s]
+peak memory difference for root successor generator creation: 0 KB
+time for root successor generation creation: 5.01e-05s
+done initializing global data [t=0.0047373s]
+
+Total allotted time (s): 3600
+Max time for core phase (remaining used in final-round repairs): 1800
+Max time for each of the 1 epochs: 1800
+
+
+
+Creating the simulator...
+
+
+Generating an incumbent solution...
+
+
+Beginning search for strong cyclic solution...
+
+
+FOND Search: Round 1
+Starting a fresh search...
+
+ {............................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................}
+
+Could not close 89 of 151 open leaf states.
+Investigated 880 states for the strong cyclic plan.
+
+
+FOND Search: Round 2
+Starting a fresh search...
+
+ {...............................................................................................................................................................................................................................................................................................................................................................................................................}
+
+Could not close 110 of 164 open leaf states.
+Investigated 699 states for the strong cyclic plan.
+Found a better policy of score 0.616
+
+
+FOND Search: Round 3
+Starting a fresh search...
+
+ {....................................................................................................................................................................................................................................................................................................................................................................................................................................................................}
+
+Could not close 136 of 233 open leaf states.
+Investigated 975 states for the strong cyclic plan.
+
+
+FOND Search: Round 4
+Starting a fresh search...
+
+ {..........................................................................................................................................................................................................................................................................................................................................}
+
+Could not close 136 of 230 open leaf states.
+Investigated 791 states for the strong cyclic plan.
+
+
+FOND Search: Round 5
+Starting a fresh search...
+
+ {..................................................................................................................................................................................................................................................................................................................................................................}
+
+Could not close 108 of 223 open leaf states.
+Investigated 846 states for the strong cyclic plan.
+Found a better policy of score 0.705
+
+
+FOND Search: Round 6
+Starting a fresh search...
+
+ {............................................................................................................................................................................................................................................................................................................................................................}
+
+Could not close 86 of 231 open leaf states.
+Investigated 874 states for the strong cyclic plan.
+
+
+FOND Search: Round 7
+Starting a fresh search...
+
+ {......................................................................................................................................................................................................................................................................}
+
+Could not close 51 of 156 open leaf states.
+Investigated 666 states for the strong cyclic plan.
+
+
+FOND Search: Round 8
+Starting a fresh search...
+
+ {...........................................................................................................................................................................................................}
+
+Could not close 48 of 147 open leaf states.
+Investigated 555 states for the strong cyclic plan.
+
+
+FOND Search: Round 9
+Starting a fresh search...
+
+ {....}
+
+Could not close 3 of 4 open leaf states.
+Investigated 18 states for the strong cyclic plan.
+
+
+FOND Search: Round 10
+Starting a fresh search...
+
+ {.}
+
+Could not close 0 of 0 open leaf states.
+Investigated 1 states for the strong cyclic plan.
+
+Found the initial state to be a failed one. No strong cyclic plan exists.
+Using the best policy found, with a score of 0.705
+
+Done repairing...
+
+
+Doing one final best-effort round ignoring FSAPs for unhandled states.
+
+
+FOND Search: Round 11
+Starting a fresh search...
+
+ {..................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................}
+
+Could not close 0 of 293 open leaf states.
+Investigated 2461 states for the strong cyclic plan.
+
+
+-------------------------------------------------------------------
+
+
+		-----------------------------------
+		      { General Statistics }
+		-----------------------------------
+
+                         Time taken: 25.6695 sec
+                           # Rounds: 11
+                    # Weak Searches: 1727
+                      Solution Size: 797
+                          FSAP Size: 5821
+                       Poison Count: 2648
+
+-------------------------------------------------------------------
+
+
+Running the simulation...
+
+		--------------------------------------
+		      { Simulation Statistics }
+		--------------------------------------
+
+                          Trials: 100
+                           Depth: 1000
+                         Success: 90	 (90.00 %)
+                        Failures: 10	 (10.00 %)
+
+ Failures due to unhandled state: 10	 (100.00 %)
+     Failures due to depth limit: 0	 (0.00 %)
+
+      Mean successful run length: 6.39
+  Mean (state-)failed run length: 0.64
+
+-------------------------------------------------------------------
+
+Dumping the policy and fsaps...
+
+No strong (a)cyclic solution found.
+Peak memory: 23712 KB
+
+
+real	0m32.993s
+user	0m25.750s
+sys	0m1.102s
