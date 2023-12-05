@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+=======
 
 USEFUL COMMANDS
 
@@ -17,6 +19,7 @@ visualize the policy
 
     prpviz policy.out
 
+>>>>>>> 0cea96e1047a81be5f8b886ae132b98694b063d4
 The cops and robbers problem:
 
     The cops and robbers problem is a variation of a pursuit-evasion problem.
@@ -28,6 +31,18 @@ The cops and robbers problem:
     In this scenario the cops would be moving non-deterministically,
     so the robber should have a plan for evasion no matter what move the cops make.
 
+Friendly robbers
+    An extra variation is the friendly robber
+    This robber wants to get captured which reverses the problem
+    Instead of trying to avoid all possible capture paths
+    You are trying to capture a randomly moving entity
+    The problem solution also reverses
+    The game ends if the robber is captured. To incentivise speed, the game randomly assigns the robber survived
+    If the robber survives the robber loses
+    Instead of most nodes leading to game terminated and a -1 meaning the robber loses
+    Most games end in -1 and a game terminated means the cop loses
+    No solutions can exist as all nodes have a chance to fail
+    Line_opposite_friendly.png shows a solution of the robber trying to get caught
 
 Domain_generic.pddl
 
@@ -50,6 +65,34 @@ Problems
     For example, the robber loses on a straight line
     Problem_line_chase.pddl is commented for clarity
 
+<<<<<<< HEAD
+graph_libraries
+    contains the data for generating graphs. the text files have adjacency graphs and the other files have 
+    the compressed data that can be extracted with showg
+
+HOW TO RUN
+
+    Place project in directory of planner
+
+    launch docker
+        docker run -it -v ${pwd}:/PROJECT rbp
+
+    example of generating benchmark
+        python rbp/prp-scripts/evaluate.py --catalogue /PROJECT/cops_and_robbers/benchmark --collection collection_test --output /PROJECT/cops_and_robbers/benchmark/RESULTS --cache CACHE --planner rbp 
+
+    go to the benchmark and run
+        cd cache 
+        time python run.py
+
+    example of running individual instances
+        rbp cops_and_robbers/benchmarks/single/d_decagon.pddl cops_and_robbers/benchmarks/single/p_decagon.pddl 
+        rbp cops_and_robbers/benchmarks/graph7/d_graph7_441.pddl cops_and_robbers/benchmarks/graph_7/p_graph7_441.pddl --output-format 3
+
+    visualize the output
+        prpviz policy.out
+
+Planner not provided
+=======
 Problem_solutions
 
     Problem solutions stores some of the graphs of the policies for future reference
@@ -72,3 +115,4 @@ Friendly robbers
     Line_chase_friendly.png shows a solution of the robber trying to get caught
     In acyclic graphs --localize-enabled 0 ensures the robber beelines for the cop instead of going to a known position
     In cyclic graphs, it will cause an infinite loop
+>>>>>>> 0cea96e1047a81be5f8b886ae132b98694b063d4
