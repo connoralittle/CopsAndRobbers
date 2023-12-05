@@ -46,6 +46,7 @@ Problems
     Problem_line_chase.pddl is commented for clarity
 
 graph_libraries
+
     contains the data for generating graphs. the text files have adjacency graphs and the other files have 
     the compressed data that can be extracted with showg
 
