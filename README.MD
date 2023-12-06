@@ -24,7 +24,7 @@ Friendly robbers
     No solutions can exist as all nodes have a chance to fail
     Line_opposite_friendly.png shows a solution of the robber trying to get caught
 
-Domain_generic.pddl
+benchmarks/single/Domain_generic.pddl
 
     The domain file is commented for clarity. It is a problem-agnostic version of the domain with bounded size.
     It is also much slower
@@ -49,6 +49,7 @@ graph_libraries
 
     contains the data for generating graphs. the text files have adjacency graphs and the other files have 
     the compressed data that can be extracted with showg
+    more graphs can be downloaded at http://users.cecs.anu.edu.au/~bdm/data/graphs.html
 
 HOW TO RUN
 
@@ -72,4 +73,4 @@ HOW TO RUN
         prpviz policy.out
 
 Planner not provided
-Not all domain and problem files pushed due to space
+Not all domain and problem files pushed due to size
